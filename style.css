@@ -41,9 +41,9 @@
 
   /* --- Palette de Couleurs --- */
 
-  --color-bg: #f8fafc;
+  --color-bg: #f2f3f5;
   --color-surface: #ffffff;
-  --color-text-main: #0f172a;
+  --color-text-main: #121212;
   --color-text-muted: #475569;
   --color-accent: #ff5b26;
   --color-accent-hover: #e04b1a;
@@ -65,6 +65,7 @@
 }
 body {
   font-family: "PT Sans", sans-serif;
+  background-color: var(--color-bg);
 }
 h1,
 h2,
@@ -78,10 +79,55 @@ h3 {
   font-family: "Nunito", sans-serif;
 }
 
-.card {
+/* =================================
+*  header
+* =================================*/
+
+.header {
+  width: 100%;
+  padding: var(--space-2);
+  position: sticky;
+  top: 0;
 }
-@media (min-width: 768px) {
-  body {
-    padding: 2rem;
-  }
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-1);
+  background-color: color-mix(in srgb, var(--soft-orange) 75%, transparent 25%);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--soft-orange);
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-md);
 }
+
+.header__caption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.header__caption h1 {
+  font-size: var(--text-sm);
+}
+
+.header__account_area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-1);
+  color: var(--color-text-muted);
+}
+
+.header img {
+  width: 2.3rem;
+  aspect-ratio: 1/1;
+  overflow: auto;
+  border-radius: var(--radius-full);
+}
+
+/* =================================
+*  header
+* =================================*/
