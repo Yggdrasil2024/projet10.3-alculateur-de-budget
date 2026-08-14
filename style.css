@@ -51,3 +51,42 @@
 
   --transition-fast: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+:root {
+  --vert: #10b981;
+  --rouge: #ef4444;
+  --texte: #1f2937;
+  --texte-clair: #6b7280;
+  --fond: #f9fafb;
+  --carte: #ffffff;
+  --rayon: 12px;
+  --espace: 1rem;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+  line-height: 1.6;
+  color: var(--texte);
+  background: var(--fond);
+  padding: var(--espace);
+}
+.carte {
+  background: var(--carte);
+  border-radius: var(--rayon);
+  padding: 1.5rem;
+  max-width: 640px;
+  margin: 0 auto;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+@media (min-width: 768px) {
+  body {
+    padding: 2rem;
+  }
+}
