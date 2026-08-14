@@ -248,6 +248,7 @@ main .dashboard .cards {
   background-color: var(--color-bg);
   outline: none;
   font-size: var(--text-lg);
+  transition: var(--transition-fast);
 }
 
 .form-field-container input:focus,
@@ -264,4 +265,116 @@ main .dashboard .cards {
   background-color: var(--color-accent);
   border: 1px solid var(--soft-orange);
   border-radius: var(--radius-xl);
+  transition: var(--transition-fast);
+}
+
+.form-field-container button:hover {
+  background-color: var(--color-accent-hover);
+}
+
+.form-field-container button:focus {
+  transform: translateY(-4px);
+}
+
+/* =================================
+*  operations
+* =================================*/
+
+.operation {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-xl);
+  padding: var(--space-2);
+  margin: var(--space-2) 0;
+  border: 2px solid var(--soft-orange);
+}
+
+.operations__info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: var(--space-2);
+}
+
+.operation__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.operation .badge {
+  font-size: var(--text-xs);
+  display: inline-block;
+  font-weight: 700;
+  color: var(--texte-clair);
+  padding: calc(var(--space-1) / 2);
+  border-radius: var(--radius-full);
+  background-color: color-mix(in srgb, var(--texte-clair) 20%, transparent 80%);
+}
+
+.operation .badge-incomes {
+  color: var(--vert);
+  background-color: color-mix(in srgb, var(--vert) 20%, transparent 80%);
+}
+
+.income {
+  font-weight: 700;
+  color: var(--vert);
+}
+
+.operation .badge-expenses {
+  color: var(--rouge);
+  background-color: color-mix(in srgb, var(--rouge) 20%, transparent 80%);
+}
+
+.expense {
+  font-weight: 700;
+  color: var(--rouge);
+}
+
+.operation__item {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-1) 0;
+  gap: var(--space-1);
+  border-radius: var(--radius-xl);
+  padding: var(--space-1);
+}
+
+.operation__item:hover {
+  background-color: var(--soft-orange);
+}
+
+.operation__item__description {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+}
+
+.operation__item__title {
+  font-weight: 700;
+}
+
+.operation__item__amt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.operation__item button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  padding: calc(var(--space-1) / 4);
 }
