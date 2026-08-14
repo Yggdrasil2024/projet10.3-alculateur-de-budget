@@ -1,13 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap");
-
-body {
-  font-family: "Plus Jakarta Sans", sans-serif;
-}
-.montant,
-.badge,
-.date {
-  font-family: "JetBrains Mono", monospace;
-}
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400&family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap");
 
 :root {
   /* --- Échelle Typographique (Base 16px) --- */
@@ -54,40 +45,39 @@ body {
   --color-surface: #ffffff;
   --color-text-main: #0f172a;
   --color-text-muted: #475569;
-  --color-accent: #3b82f6;
-  --color-accent-hover: #2563eb;
+  --color-accent: #ff5b26;
+  --color-accent-hover: #e04b1a;
+  --soft-orange: #fff0eb;
   --color-border: rgba(15, 23, 42, 0.06);
-
+  --vert: #10b981;
+  --rouge: #ef4444;
+  --texte: #1f2937;
+  --texte-clair: #6b7280;
   /* --- Transitions fluides --- */
 
   --transition-fast: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-:root {
-  --vert: #10b981;
-  --rouge: #ef4444;
-  --texte: #1f2937;
-  --texte-clair: #6b7280;
-  --fond: #f9fafb;
-  --carte: #ffffff;
-  --rayon: 12px;
-  --espace: 1rem;
-}
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 body {
-  body {
-    font-family: "Plus Jakarta Sans", sans-serif;
-  }
-  .montant,
-  .badge,
-  .date {
-    font-family: "JetBrains Mono", monospace;
-  }
+  font-family: "PT Sans", sans-serif;
 }
+h1,
+h2,
+h3 {
+  font-family: "Nunito", sans-serif;
+}
+
+.montant,
+.badge,
+.date {
+  font-family: "Nunito", sans-serif;
+}
+
 .card {
 }
 @media (min-width: 768px) {
