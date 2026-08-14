@@ -1,3 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap");
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+.montant,
+.badge,
+.date {
+  font-family: "JetBrains Mono", monospace;
+}
+
 :root {
   /* --- Échelle Typographique (Base 16px) --- */
 
@@ -68,22 +79,16 @@
   padding: 0;
 }
 body {
-  font-family:
-    system-ui,
-    -apple-system,
-    sans-serif;
-  line-height: 1.6;
-  color: var(--texte);
-  background: var(--fond);
-  padding: var(--espace);
+  body {
+    font-family: "Plus Jakarta Sans", sans-serif;
+  }
+  .montant,
+  .badge,
+  .date {
+    font-family: "JetBrains Mono", monospace;
+  }
 }
-.carte {
-  background: var(--carte);
-  border-radius: var(--rayon);
-  padding: 1.5rem;
-  max-width: 640px;
-  margin: 0 auto;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+.card {
 }
 @media (min-width: 768px) {
   body {
