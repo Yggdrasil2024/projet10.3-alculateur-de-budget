@@ -46,3 +46,27 @@ const idGenerator = () => {
   return id.join("");
 };
 
+/**
+ * on va gerer ce qui se passe au moment de
+ * l'ajout d'une operation
+ */
+form.addEventListener("submit", (event) => {
+  //previent les indesirables
+  event.preventDefault();
+
+  const f_title = operationTitle.value;
+  const f_amount = parseFloat(operationAmount.value);
+  const f_type = operationType.value;
+
+  //nouvelle operation
+  const newOperation = {
+    id: idGenerator(),
+    title: f_title,
+    amount: f_amount,
+    type: f_type,
+  };
+
+  //ajout dans les les operations
+  addToOperations(newOperation);
+  form.reset();
+});
