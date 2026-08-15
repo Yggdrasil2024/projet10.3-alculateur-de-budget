@@ -140,6 +140,21 @@ main .container {
   margin: 0 var(--space-2);
 }
 
+@media screen and (min-width: 768px) {
+  main,
+  .header {
+    padding-left: var(--space-12);
+    padding-right: var(--space-12);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  main,
+  .header {
+    padding: var(--space-1);
+  }
+}
+
 /* =================================
 *  main - dashboard area
 * =================================*/
@@ -215,6 +230,27 @@ main .dashboard .cards {
   border: 2px solid var(--soft-orange);
 }
 
+/* ----- version tablette ----- */
+@media screen and (min-width: 768px) {
+  main .dashboard .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-2);
+    width: 100%;
+  }
+
+  .card:first-child {
+    grid-column: span 2;
+  }
+
+  .card:nth-child(2) {
+    grid-column: span 1;
+  }
+
+  .card:last-child {
+    grid-column: span 1;
+  }
+}
 /* =================================
 *  main - formulaire
 * =================================*/
@@ -274,6 +310,30 @@ main .dashboard .cards {
 
 .form-field-container button:focus {
   transform: translateY(-4px);
+}
+
+/* ----- version tablette ----- */
+@media screen and (min-width: 768px) {
+  .dashboard form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: var(--space-1);
+    column-gap: var(--space-3);
+  }
+
+  .dashboard form h3 {
+    grid-column: span 2;
+  }
+
+  .dashboard form :nth-child(2) {
+    grid-column: span 2;
+  }
+  .form-field-container:nth-child(2) {
+    grid-column: span 1;
+  }
+  .form-field-container:last-child {
+    grid-column: span 2;
+  }
 }
 
 /* =================================
@@ -377,4 +437,13 @@ main .dashboard .cards {
   border-radius: 50%;
   border: 1px solid transparent;
   padding: calc(var(--space-1) / 4);
+}
+
+main .dashboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: var(--space-2);
+  width: 100%;
 }
