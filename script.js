@@ -14,4 +14,10 @@ const balance = document.getElementById("balance");
 const tatalIncome = document.getElementById("earnings");
 const totalSpent = document.getElementById("expenses");
 
+const renderUI = () => {};
+
+const addToOperations = (operation) => {
+  operations.unshift(operation);
+};
+
 
