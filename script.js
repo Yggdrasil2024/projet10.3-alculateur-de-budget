@@ -20,4 +20,29 @@ const addToOperations = (operation) => {
   operations.unshift(operation);
 };
 
+/**
+ * fonction qui va generer un id aleatoire
+ *
+ * @returns {string} - id aleatoire
+ */
+const idGenerator = () => {
+  const id = [];
+  char = "1234567890abcdefghijklmnopqrstuvxyz";
+
+  //generation de l'id
+  for (let index = 0; index < 6; index++) {
+    id[index] = char[Math.floor(Math.random() * char.length)];
+  }
+  //on genere un autre id si celui là existe deja
+  if (operations) {
+    const operationsIds = operations.map((item) => {
+      return item.id;
+    });
+
+    if (operationsIds.includes(id.join(""))) {
+      return idGenerator();
+    }
+  }
+  return id.join("");
+};
 
