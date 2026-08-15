@@ -407,7 +407,7 @@ main .dashboard .cards {
 }
 
 .operation__item:hover {
-  background-color: var(--soft-orange);
+  background-color: color-mix(in srgb, var(--soft-orange) 40%, transparent 60%);
 }
 
 .operation__item__description {
@@ -420,6 +420,20 @@ main .dashboard .cards {
 
 .operation__item__title {
   font-weight: 700;
+  position: relative;
+}
+
+.operation__item__title::before {
+  content: "";
+  display: inline-block;
+  aspect-ratio: 1/1;
+  border-radius: var(--radius-full);
+  border: 5px solid var(--vert);
+  margin-right: var(--space-1);
+}
+
+.dot-expense::before {
+  border: 5px solid var(--rouge);
 }
 
 .operation__item__amt {
@@ -437,6 +451,11 @@ main .dashboard .cards {
   border-radius: 50%;
   border: 1px solid transparent;
   padding: calc(var(--space-1) / 4);
+  background-color: color-mix(
+    in srgb,
+    var(--color-border) 50%,
+    transparent 50%
+  );
 }
 
 main .dashboard {
@@ -446,4 +465,24 @@ main .dashboard {
   align-items: flex-start;
   gap: var(--space-2);
   width: 100%;
+}
+
+/* ----- main layout desktop ----- */
+@media screen and (min-width: 1024px) {
+  .header .container {
+    max-width: 1250px;
+    margin-inline: auto;
+  }
+  main .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-2);
+    width: 100%;
+    max-width: 1200px;
+    margin-inline: auto;
+  }
+
+  .operation {
+    margin: 0;
+  }
 }
