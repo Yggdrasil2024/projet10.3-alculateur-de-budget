@@ -66,7 +66,7 @@ const renderUI = () => {
                                     <span class="badge ${earning ? "badge-incomes" : "badge-expenses"}">${earning ? "Revenu" : "Dépense"}</span>
                                 </div>
                             </div>
-                            <div class="operation__item__action"><button type="button"><img
+                            <div class="operation__item__action"><button onclick="deleteOperation('${item.id}')" type="button"><img
                                         src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXgtaWNvbiBsdWNpZGUteCI+PHBhdGggZD0iTTE4IDYgNiAxOCIvPjxwYXRoIGQ9Im02IDYgMTIgMTIiLz48L3N2Zz4="
                                         alt="effacer">
                                 </button></div>
@@ -87,6 +87,17 @@ const renderUI = () => {
   localStorage.setItem("operation-list", JSON.stringify(operations));
 };
 
+/**
+ * fonction pour supprimer
+ * une operation
+ *
+ * @param {string} id - identifiant de l'operation
+ */
+const deleteOperation = (id) => {
+  operations = operations.filter((item) => item.id !== id);
+  renderUI();
+};
+
 const addToOperations = (operation) => {
   try {
     operations.unshift(operation);
@@ -103,7 +114,7 @@ const addToOperations = (operation) => {
  */
 const idGenerator = () => {
   const id = [];
-  char = "1234567890abcdefghijklmnopqrstuvxyz";
+  const char = "1234567890abcdefghijklmnopqrstuvxyz";
 
   //generation de l'id
   for (let index = 0; index < 6; index++) {
@@ -154,5 +165,5 @@ form.addEventListener("submit", (event) => {
   renderUI();
 });
 
-//on charge l'interface depuis donné
+//on charge l'interface depuis donnée en local
 renderUI();
