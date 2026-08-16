@@ -3,14 +3,14 @@
 > Application de gestion de budget destiné à l'usage personnel
 > _projet 10.3 - cohorte 2 Akieni academy_
 
----
+
 
 # Overview
 
 Budget kit est une application web légère et responsive de gestion de budget, elle permet d'ajouter et efface nos dépenses et revenu puis de donner le solde, le total des dépenses ainsi que des revenu le tout mis à jour en temps réel et enregistrer dans `LocalStorage`.
 <img src="assets/img/demo.png" alt="image de l'interface">
 
----
+
 
 # Fonctionnalités
 
@@ -26,7 +26,7 @@ Budget kit est une application web légère et responsive de gestion de budget, 
 - **Mise en forme :**
   - Formatage monétaire automatique au format XAF (Franc CFA) via l'API `Intl.NumberFormat`.
 
----
+
 
 # Technologies utilisées
 
@@ -34,7 +34,7 @@ Budget kit est une application web légère et responsive de gestion de budget, 
 - **CSS3** : Variables CSS, mise en page responsive et classes d'état (revenu/dépense).
 - **JavaScript (ES6+)** : Manipulation du DOM, gestion des événements, algorithme de génération d'ID récursif, persistance `localStorage`.
 
----
+
 
 # structure des objet opération
 
@@ -49,7 +49,7 @@ Chaque opération est stockée est stocké dans un tableau qui lui est enregistr
 }
 ```
 
----
+
 
 # Architecture du projet
 
@@ -65,13 +65,13 @@ projet10.3-calculateur-de-budget/
 └── README.md           # Documentation du projet
 ```
 
----
+
 
 # Demo
 
 [lien vers la demo live](https://yggdrasil2024.github.io/projet10.3-alculateur-de-budget/)
 
----
+
 
 # auteur
 
